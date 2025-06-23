@@ -1,3 +1,3 @@
-the eeg file contains script to load the EEG data, apply the usual pre-processing steps ,correcting artifacts  and subsequently displaying various features of the data (real time views, artifact correction, spectrogram)
+the eeg file contains script to load the EEG data from open neuro database( specifically: https://openneuro.org/datasets/ds006036/versions/1.0.5) apply the usual pre-processing steps ,correcting artifacts  and subsequently displaying various features of the data (real time views, artifact correction, spectrogram)
 
-the open neuro file contains script to extract and load the blood marker data, then find correlations of APOE and PICALM with other factors -age, gender, blood markers, cognitive performances.
+the open neuro file contains script to extract and load the blood marker data from open neuro database( specifically:https://openneuro.org/datasets/ds004796/versions/1.0.9), then find correlations of APOE and PICALM with other factors -age, gender, blood markers, cognitive performances.
