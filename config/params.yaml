@@ -1,0 +1,35 @@
+# Configuration for OpenNeuro Datasets Analysis
+
+paths:
+  eeg_input: "data/raw/sub-001_task-photomark_eeg.set"
+  eeg_cleaned_output: "data/processed/cleaned_fp1_fp2_raw.fif"
+  biomarker_input: "data/raw/participants.tsv"
+  results_dir: "results/"
+
+datasets:
+  eeg:
+    openneuro_id: "ds006036"
+    version: "1.0.5"
+    url: "https://openneuro.org/datasets/ds006036/versions/1.0.5"
+  biomarker:
+    openneuro_id: "ds004796"
+    version: "1.0.9"
+    url: "https://openneuro.org/datasets/ds004796/versions/1.0.9"
+
+eeg_preprocessing:
+  bandpass_low: 1.0
+  bandpass_high: 40.0
+  ica_n_components: 19
+  ica_random_state: 97
+  noisy_channel_threshold: 5.0e-5
+  flat_channel_threshold: 1.0e-6
+  epoch_tmin: -0.2
+  epoch_tmax: 0.8
+  channels_of_interest: ["Fp1", "Fp2"]
+
+biomarker_analysis:
+  genetic_markers: ["APOE_rs429358", "APOE_rs7412", "PICALM_rs3851179"]
+  demographic_columns: ["age", "sex"]
+  blood_markers: ["cholesterol_HDL", "LDL_cholesterol", "triglycerides"]
+  cognitive_columns: ["CVLT_3", "CVLT_4", "MINI-COPE_5", "BDI", "RPM"]
+  correlation_method: "pearson"
